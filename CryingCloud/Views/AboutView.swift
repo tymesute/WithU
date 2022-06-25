@@ -1,20 +1,20 @@
 //
-//  InfoView.swift
+//  AboutView.swift
 //  CryingCloud
 //
-//  Created by E2318556 on 24/6/2565 BE.
+//  Created by E2318556 on 25/6/2565 BE.
 //
 
 import SwiftUI
 
-struct InfoView: View {
+struct AboutView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
+struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView()
+        AboutView()
     }
 }

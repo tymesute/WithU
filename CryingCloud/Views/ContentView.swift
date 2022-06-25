@@ -15,14 +15,14 @@ struct ContentView: View {
         TabView{
             HomeView()
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "quote.bubble.fill")
                     Text("Quotes")
                 }
             
-            InfoView()
+            AboutView()
                 .tabItem {
-                    Image(systemName: "doc.text.fill")
-                    Text("Info")
+                    Image(systemName: "cloud.fill")
+                    Text("About Us")
                 }
             
             

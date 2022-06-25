@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @State var showingSheet = false
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
-
+    var images = ["1", "2", "3", "4", "5"]
     
     var body: some View {
+        
         NavigationView{
             ZStack{
                 //Beige background
@@ -79,6 +81,7 @@ struct HomeView: View {
             }
             .navigationTitle("Crying Cloud")
             
+            
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){
                     Image("Logo")
@@ -95,7 +98,7 @@ struct HomeView: View {
                             .scaleEffect(1.2)
                             
                     }.sheet(isPresented: $showingSheet) {
-                        
+                        ManualView()
                     }
                 }
                 
@@ -103,14 +106,15 @@ struct HomeView: View {
         }
     }
     
+    
     /*func shareButton() {
         isShareSheetShowing.toggle()
-        
         let url = URL(string: "https://youtu.be/EBc1OjRrJjs")
         let av = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
         
         UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
     }*/
+    
     
     func chooseRandomImage() -> String {
         let array = images
@@ -119,8 +123,6 @@ struct HomeView: View {
         
         return result
     }
-    
-    var images = ["1", "2", "3", "4", "5"]
     
 }
 
