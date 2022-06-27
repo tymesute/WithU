@@ -9,13 +9,29 @@
 /* Begin PBXBuildFile section */
 		6C383C6B2805DECC0008E8C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C383C6A2805DECC0008E8C4 /* HomeView.swift */; };
 		6C4E7A7C286672EA00535CA6 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4E7A7B286672EA00535CA6 /* QuoteView.swift */; };
+		6C826A83286A08F000E05DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF6924327F42A0B00A0D9F3 /* Assets.xcassets */; };
 		6C8DC9192866763A00D27919 /* ManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8DC9182866763A00D27919 /* ManualView.swift */; };
+		6C9A906028697A38005D5F6D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD395342869708600DCE424 /* WidgetKit.framework */; };
+		6C9A906128697A38005D5F6D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD395362869708600DCE424 /* SwiftUI.framework */; };
+		6C9A906428697A38005D5F6D /* QuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A906328697A38005D5F6D /* QuoteWidget.swift */; };
+		6C9A906628697A39005D5F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C9A906528697A39005D5F6D /* Assets.xcassets */; };
+		6C9A906A28697A39005D5F6D /* QuoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6CB2011E2867C4A500B87D1B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2011D2867C4A500B87D1B /* AboutView.swift */; };
 		6CF6924027F42A0900A0D9F3 /* CryingCloudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6923F27F42A0900A0D9F3 /* CryingCloudApp.swift */; };
 		6CF6924227F42A0900A0D9F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6924127F42A0900A0D9F3 /* ContentView.swift */; };
 		6CF6924427F42A0B00A0D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF6924327F42A0B00A0D9F3 /* Assets.xcassets */; };
 		6CF6924727F42A0B00A0D9F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF6924627F42A0B00A0D9F3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C9A906828697A39005D5F6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CF6923427F42A0800A0D9F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C9A905E28697A37005D5F6D;
+			remoteInfo = QuoteWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6CFCFF962868A5B300BCB437 /* Embed App Extensions */ = {
@@ -24,6 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				6C9A906A28697A39005D5F6D /* QuoteWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +51,10 @@
 		6C383C6A2805DECC0008E8C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6C4E7A7B286672EA00535CA6 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		6C8DC9182866763A00D27919 /* ManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualView.swift; sourceTree = "<group>"; };
+		6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C9A906328697A38005D5F6D /* QuoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidget.swift; sourceTree = "<group>"; };
+		6C9A906528697A39005D5F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C9A906728697A39005D5F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CB2011D2867C4A500B87D1B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		6CBF60D92861939D0025C3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6CD395342869708600DCE424 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -46,6 +67,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6C9A905C28697A37005D5F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9A906128697A38005D5F6D /* SwiftUI.framework in Frameworks */,
+				6C9A906028697A38005D5F6D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CF6923927F42A0800A0D9F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,6 +98,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6C9A906228697A38005D5F6D /* QuoteWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6C9A906328697A38005D5F6D /* QuoteWidget.swift */,
+				6C9A906528697A39005D5F6D /* Assets.xcassets */,
+				6C9A906728697A39005D5F6D /* Info.plist */,
+			);
+			path = QuoteWidget;
+			sourceTree = "<group>";
+		};
 		6CD395332869708600DCE424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				6CF6923E27F42A0900A0D9F3 /* CryingCloud */,
+				6C9A906228697A38005D5F6D /* QuoteWidget */,
 				6CD395332869708600DCE424 /* Frameworks */,
 				6CF6923D27F42A0900A0D9F3 /* Products */,
 			);
@@ -90,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				6CF6923C27F42A0900A0D9F3 /* CryingCloud.app */,
+				6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +159,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6C9A905E28697A37005D5F6D /* QuoteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C9A906D28697A39005D5F6D /* Build configuration list for PBXNativeTarget "QuoteWidgetExtension" */;
+			buildPhases = (
+				6C9A905B28697A37005D5F6D /* Sources */,
+				6C9A905C28697A37005D5F6D /* Frameworks */,
+				6C9A905D28697A37005D5F6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuoteWidgetExtension;
+			productName = QuoteWidgetExtension;
+			productReference = 6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		6CF6923B27F42A0800A0D9F3 /* CryingCloud */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CF6924A27F42A0B00A0D9F3 /* Build configuration list for PBXNativeTarget "CryingCloud" */;
@@ -129,6 +188,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6C9A906928697A39005D5F6D /* PBXTargetDependency */,
 			);
 			name = CryingCloud;
 			productName = CryingCloud;
@@ -145,6 +205,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					6C9A905E28697A37005D5F6D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					6CF6923B27F42A0800A0D9F3 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -164,11 +227,21 @@
 			projectRoot = "";
 			targets = (
 				6CF6923B27F42A0800A0D9F3 /* CryingCloud */,
+				6C9A905E28697A37005D5F6D /* QuoteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6C9A905D28697A37005D5F6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C826A83286A08F000E05DBE /* Assets.xcassets in Resources */,
+				6C9A906628697A39005D5F6D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CF6923A27F42A0800A0D9F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +254,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6C9A905B28697A37005D5F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9A906428697A38005D5F6D /* QuoteWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CF6923827F42A0800A0D9F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,7 +277,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6C9A906928697A39005D5F6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C9A905E28697A37005D5F6D /* QuoteWidgetExtension */;
+			targetProxy = 6C9A906828697A39005D5F6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		6C9A906B28697A39005D5F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BY5VXPA4VT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuoteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuoteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.CryingCloud.QuoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C9A906C28697A39005D5F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BY5VXPA4VT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuoteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuoteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.CryingCloud.QuoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6CF6924827F42A0B00A0D9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -316,6 +461,7 @@
 		6CF6924B27F42A0B00A0D9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +494,7 @@
 		6CF6924C27F42A0B00A0D9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6C9A906D28697A39005D5F6D /* Build configuration list for PBXNativeTarget "QuoteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C9A906B28697A39005D5F6D /* Debug */,
+				6C9A906C28697A39005D5F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6CF6923727F42A0800A0D9F3 /* Build configuration list for PBXProject "CryingCloud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -12,7 +12,11 @@ struct HomeView: View {
     @State var showingSheet = false
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
-    var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    
+    init(){
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color(UIColor(named: "newPurple")!))]
+    }
     
     var body: some View {
         
@@ -42,7 +46,7 @@ struct HomeView: View {
                                                         
                             Image(systemName: "goforward")
                                 .font(.title)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
                         }
                         .frame(width: 80, height: 80)
                         .background(Color(UIColor(named: "newPurple")!))
@@ -81,7 +85,7 @@ struct HomeView: View {
                 self.random = chooseRandomImage()
             }
             .navigationTitle("Crying Cloud")
-            
+           
             
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading){
