@@ -52,7 +52,11 @@ struct ManualView: View {
                                 Text("1. แตะวิดเจ็ตค้างไว้เพื่อเปิดเมนูการทำงานด่วน")
                                 
                                 Text("2. แตะ เอาวิดเจ็ตออก (หรือ เอาวิดเจ็ตซ้อนออก) แล้วแตะ เอาออก")
-                            }
+                            }.padding(.bottom)
+                            
+                            Text("ข้อมูลจาก Apple")
+                                .font(.caption)
+                            
                         }.padding([.leading, .trailing])
                     }
                     

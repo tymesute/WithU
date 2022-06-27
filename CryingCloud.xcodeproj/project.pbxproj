@@ -17,12 +17,27 @@
 		6CF6924727F42A0B00A0D9F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF6924627F42A0B00A0D9F3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6CFCFF962868A5B300BCB437 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6C383C6A2805DECC0008E8C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6C4E7A7B286672EA00535CA6 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		6C8DC9182866763A00D27919 /* ManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualView.swift; sourceTree = "<group>"; };
 		6CB2011D2867C4A500B87D1B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		6CBF60D92861939D0025C3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6CD395342869708600DCE424 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6CD395362869708600DCE424 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6CF6923C27F42A0900A0D9F3 /* CryingCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryingCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF6923F27F42A0900A0D9F3 /* CryingCloudApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryingCloudApp.swift; sourceTree = "<group>"; };
 		6CF6924127F42A0900A0D9F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,10 +68,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6CD395332869708600DCE424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CD395342869708600DCE424 /* WidgetKit.framework */,
+				6CD395362869708600DCE424 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6CF6923327F42A0800A0D9F3 = {
 			isa = PBXGroup;
 			children = (
 				6CF6923E27F42A0900A0D9F3 /* CryingCloud */,
+				6CD395332869708600DCE424 /* Frameworks */,
 				6CF6923D27F42A0900A0D9F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +124,7 @@
 				6CF6923827F42A0800A0D9F3 /* Sources */,
 				6CF6923927F42A0800A0D9F3 /* Frameworks */,
 				6CF6923A27F42A0800A0D9F3 /* Resources */,
+				6CFCFF962868A5B300BCB437 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -116,7 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					6CF6923B27F42A0800A0D9F3 = {

@@ -9,7 +9,20 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            ZStack{
+                Rectangle()
+                    .fill(Color(red: 238/255, green: 235/255, blue: 227/255))
+                    .ignoresSafeArea()
+                
+                ScrollView{
+                    VStack{
+                        Text("Hello World")
+                        
+                    }
+                }.navigationTitle("About Us")
+            }
+        }
     }
 }
 

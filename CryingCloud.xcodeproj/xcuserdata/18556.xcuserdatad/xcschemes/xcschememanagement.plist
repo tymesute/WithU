@@ -6,12 +6,19 @@
 	<dict>
 		<key>CryingCloud.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6CD395312869708600DCE424</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6CF6923B27F42A0800A0D9F3</key>
 		<dict>
 			<key>primary</key>

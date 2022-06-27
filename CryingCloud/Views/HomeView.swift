@@ -12,7 +12,7 @@ struct HomeView: View {
     @State var showingSheet = false
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
-    var images = ["1", "2", "3", "4", "5"]
+    var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
     var body: some View {
         
@@ -39,15 +39,16 @@ struct HomeView: View {
                         Button(action: {
                             self.random = chooseRandomImage()
                         }){
-                            
-                            
+                                                        
                             Image(systemName: "goforward")
                                 .font(.title)
-                                .foregroundColor(Color(UIColor(named: "newPurple")!))
+                                .foregroundColor(.white)
                         }
                         .frame(width: 80, height: 80)
-                        .background(.white)
-                        .cornerRadius(100)
+                        .background(Color(UIColor(named: "newPurple")!))
+                        .clipShape(Circle())
+                        
+                        
                         .contextMenu{
                             VStack{
                                 Button(action:{
@@ -117,7 +118,7 @@ struct HomeView: View {
     
     
     func chooseRandomImage() -> String {
-        let array = images
+        let array = quotes
         
         let result = array.randomElement()!
         
