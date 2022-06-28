@@ -8,31 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        //UITabBar.appearance().barTintColor = UIColor.white
+
+        }
 
     var body: some View {
-        
-        
-        TabView{
+    
+        //TabView{
             HomeView()
                 .tabItem {
                     Image(systemName: "quote.bubble.fill")
                     Text("Quotes")
                 }
             
-            AboutView()
+            /*AboutView()
                 .tabItem {
                     Image(systemName: "cloud.fill")
                     Text("About Us")
-                }
+                }*/
             
             
-        }
-        .accentColor(Color(UIColor(named: "newPurple")!))
+        //}
+        //.accentColor(.black)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }

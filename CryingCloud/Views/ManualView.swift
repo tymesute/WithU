@@ -21,8 +21,7 @@ struct ManualView: View {
                         VStack{
                             VStack(alignment: .leading, spacing: 15){
                                 Text("เพิ่มวิดเจ็ตไปยังหน้าจอโฮมของคุณ")
-                                    .font(.title)
-                                    .padding(.top)
+                                    .bold()
                                                         
                                 Text("1. ไปที่หน้าของหน้าจอโฮมที่คุณต้องการเพิ่มวิดเจ็ต แล้วแตะพื้นหลังของหน้าจอโฮมค้างไว้จนแอปเริ่มสั่น")
                                 
@@ -33,7 +32,8 @@ struct ManualView: View {
                                 Text("4. เมื่อคุณเห็นขนาดที่คุณต้องการ ให้แตะ เพิ่มวิดเจ็ต")
                                 
                                 Text("5. ในระหว่างที่แอปยังคงสั่นอยู่ ให้ย้ายวิดเจ็ตไปยังตำแหน่งที่คุณต้องการบนหน้าจอ จากนั้นแตะ เสร็จสิ้น")
-                            }
+                            }.padding(.top)
+
                             
                             Image("Widget")
                                 .resizable()
@@ -46,7 +46,7 @@ struct ManualView: View {
                             
                             VStack(alignment: .leading, spacing: 15){
                                 Text("เอาวิดเจ็ตออกจากหน้าจอโฮม:")
-                                    .font(.title)
+                                    .bold()
                                     .padding(.top)
                                 
                                 Text("1. แตะวิดเจ็ตค้างไว้เพื่อเปิดเมนูการทำงานด่วน")
@@ -57,7 +57,7 @@ struct ManualView: View {
                             Text("ข้อมูลจาก Apple")
                                 .font(.caption)
                             
-                        }.padding([.leading, .trailing])
+                        }.padding([.leading, .trailing], 25)
                     }
                     
                     

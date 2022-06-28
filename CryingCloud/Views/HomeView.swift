@@ -9,29 +9,33 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var showingSheet = false
+    @State var manualSheet = false
+    @State var aboutUsSheet = false
+
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
     var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
     
     init(){
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color(UIColor(named: "newPurple")!))]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(.black)]
+        
+        //Add Swiftfx package
+        //UINavigationBar.appearance().largeTitleTextAttributes
     }
     
     var body: some View {
         
         NavigationView{
             ZStack{
-                //Beige background
-                /*Image("Background")
+                //Background
+                Image("Background2")
                     .resizable()
                     .ignoresSafeArea()
-                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                    .opacity(0.6)*/
+                    
                 
-                Rectangle()
+                /*Rectangle()
                     .ignoresSafeArea()
-                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
+                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))*/
                 
                 VStack{
                     QuoteView(random: $random)
@@ -52,10 +56,10 @@ struct HomeView: View {
                                                         
                             Image(systemName: "goforward")
                                 .font(.largeTitle)
-                                .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
+                                .foregroundColor(.black)
                         }
                         .frame(width: 75, height: 75)
-                        .background(Color(UIColor(named: "newPurple")!))
+                        .background(Color(red: 238/255, green: 235/255, blue: 227/255))
                         .clipShape(Circle())
                         
                         
@@ -94,25 +98,34 @@ struct HomeView: View {
            
             
             .toolbar{
-                ToolbarItem(placement: .navigationBarLeading){
+                /*ToolbarItem(placement: .navigationBarLeading){
                     Image("Logo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .padding(.leading, -70)
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing){
                     
-                    Button(action: {showingSheet.toggle()}){
+                }*/
+                
+                ToolbarItemGroup(placement: .navigationBarTrailing){
+                    
+                    Button(action: {manualSheet.toggle()}){
                         Image(systemName: "questionmark")
-                            .foregroundColor(Color(UIColor(named: "newPurple")!))
+                            .foregroundColor(.black)
                             .scaleEffect(1.2)
                             
-                    }.sheet(isPresented: $showingSheet) {
+                    }.sheet(isPresented: $manualSheet) {
                         ManualView()
                     }
+                    
+                    Button(action: {aboutUsSheet.toggle()}){
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.black)
+                            .scaleEffect(1.2)
+                    }.sheet(isPresented: $aboutUsSheet) {
+                        AboutView()
+                    }
+                    
                 }
-                
+            
             }
         }
     }
