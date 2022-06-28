@@ -17,7 +17,7 @@
 		6C9A906628697A39005D5F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C9A906528697A39005D5F6D /* Assets.xcassets */; };
 		6C9A906A28697A39005D5F6D /* QuoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6CB2011E2867C4A500B87D1B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB2011D2867C4A500B87D1B /* AboutView.swift */; };
-		6CF6924027F42A0900A0D9F3 /* CryingCloudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6923F27F42A0900A0D9F3 /* CryingCloudApp.swift */; };
+		6CF6924027F42A0900A0D9F3 /* WithU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6923F27F42A0900A0D9F3 /* WithU.swift */; };
 		6CF6924227F42A0900A0D9F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF6924127F42A0900A0D9F3 /* ContentView.swift */; };
 		6CF6924427F42A0B00A0D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF6924327F42A0B00A0D9F3 /* Assets.xcassets */; };
 		6CF6924727F42A0B00A0D9F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF6924627F42A0B00A0D9F3 /* Preview Assets.xcassets */; };
@@ -59,8 +59,8 @@
 		6CBF60D92861939D0025C3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6CD395342869708600DCE424 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		6CD395362869708600DCE424 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		6CF6923C27F42A0900A0D9F3 /* CryingCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryingCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CF6923F27F42A0900A0D9F3 /* CryingCloudApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryingCloudApp.swift; sourceTree = "<group>"; };
+		6CF6923C27F42A0900A0D9F3 /* WithU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WithU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF6923F27F42A0900A0D9F3 /* WithU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithU.swift; sourceTree = "<group>"; };
 		6CF6924127F42A0900A0D9F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6CF6924327F42A0B00A0D9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CF6924627F42A0B00A0D9F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		6CF6923327F42A0800A0D9F3 = {
 			isa = PBXGroup;
 			children = (
-				6CF6923E27F42A0900A0D9F3 /* CryingCloud */,
+				6CF6923E27F42A0900A0D9F3 /* WithU */,
 				6C9A906228697A38005D5F6D /* QuoteWidget */,
 				6CD395332869708600DCE424 /* Frameworks */,
 				6CF6923D27F42A0900A0D9F3 /* Products */,
@@ -130,22 +130,22 @@
 		6CF6923D27F42A0900A0D9F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6CF6923C27F42A0900A0D9F3 /* CryingCloud.app */,
+				6CF6923C27F42A0900A0D9F3 /* WithU.app */,
 				6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6CF6923E27F42A0900A0D9F3 /* CryingCloud */ = {
+		6CF6923E27F42A0900A0D9F3 /* WithU */ = {
 			isa = PBXGroup;
 			children = (
 				6CBF60D92861939D0025C3D4 /* Info.plist */,
-				6CF6923F27F42A0900A0D9F3 /* CryingCloudApp.swift */,
+				6CF6923F27F42A0900A0D9F3 /* WithU.swift */,
 				6C8DC91A2866764800D27919 /* Views */,
 				6CF6924327F42A0B00A0D9F3 /* Assets.xcassets */,
 				6CF6924527F42A0B00A0D9F3 /* Preview Content */,
 			);
-			path = CryingCloud;
+			path = WithU;
 			sourceTree = "<group>";
 		};
 		6CF6924527F42A0B00A0D9F3 /* Preview Content */ = {
@@ -176,9 +176,9 @@
 			productReference = 6C9A905F28697A37005D5F6D /* QuoteWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		6CF6923B27F42A0800A0D9F3 /* CryingCloud */ = {
+		6CF6923B27F42A0800A0D9F3 /* WithU */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CF6924A27F42A0B00A0D9F3 /* Build configuration list for PBXNativeTarget "CryingCloud" */;
+			buildConfigurationList = 6CF6924A27F42A0B00A0D9F3 /* Build configuration list for PBXNativeTarget "WithU" */;
 			buildPhases = (
 				6CF6923827F42A0800A0D9F3 /* Sources */,
 				6CF6923927F42A0800A0D9F3 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				6C9A906928697A39005D5F6D /* PBXTargetDependency */,
 			);
-			name = CryingCloud;
+			name = WithU;
 			productName = CryingCloud;
-			productReference = 6CF6923C27F42A0900A0D9F3 /* CryingCloud.app */;
+			productReference = 6CF6923C27F42A0900A0D9F3 /* WithU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6CF6923727F42A0800A0D9F3 /* Build configuration list for PBXProject "CryingCloud" */;
+			buildConfigurationList = 6CF6923727F42A0800A0D9F3 /* Build configuration list for PBXProject "WithU" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,7 +226,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6CF6923B27F42A0800A0D9F3 /* CryingCloud */,
+				6CF6923B27F42A0800A0D9F3 /* WithU */,
 				6C9A905E28697A37005D5F6D /* QuoteWidgetExtension */,
 			);
 		};
@@ -271,7 +271,7 @@
 				6C383C6B2805DECC0008E8C4 /* HomeView.swift in Sources */,
 				6C8DC9192866763A00D27919 /* ManualView.swift in Sources */,
 				6CB2011E2867C4A500B87D1B /* AboutView.swift in Sources */,
-				6CF6924027F42A0900A0D9F3 /* CryingCloudApp.swift in Sources */,
+				6CF6924027F42A0900A0D9F3 /* WithU.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +305,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.CryingCloud.QuoteWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.WithU.QuoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -333,7 +333,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.CryingCloud.QuoteWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.WithU.QuoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -466,24 +466,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CryingCloud/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WithU/Preview Content\"";
 				DEVELOPMENT_TEAM = BY5VXPA4VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CryingCloud/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) needs permission to access photos on your device";
+				INFOPLIST_FILE = WithU/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "WithU needs permission to access photos on your device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.CryingCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.WithU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,24 +498,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CryingCloud/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WithU/Preview Content\"";
 				DEVELOPMENT_TEAM = BY5VXPA4VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CryingCloud/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) needs permission to access photos on your device";
+				INFOPLIST_FILE = WithU/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "WithU needs permission to access photos on your device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.CryingCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = TymeDev.WithU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -536,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6CF6923727F42A0800A0D9F3 /* Build configuration list for PBXProject "CryingCloud" */ = {
+		6CF6923727F42A0800A0D9F3 /* Build configuration list for PBXProject "WithU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CF6924827F42A0B00A0D9F3 /* Debug */,
@@ -545,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6CF6924A27F42A0B00A0D9F3 /* Build configuration list for PBXNativeTarget "CryingCloud" */ = {
+		6CF6924A27F42A0B00A0D9F3 /* Build configuration list for PBXNativeTarget "WithU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CF6924B27F42A0B00A0D9F3 /* Debug */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CryingCloudApp: App {
+struct WithUapp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
