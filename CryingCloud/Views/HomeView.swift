@@ -12,7 +12,7 @@ struct HomeView: View {
     @State var showingSheet = false
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
-    var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
     
     init(){
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Color(UIColor(named: "newPurple")!))]
@@ -23,9 +23,15 @@ struct HomeView: View {
         NavigationView{
             ZStack{
                 //Beige background
-                Rectangle()
-                    .fill(Color(red: 238/255, green: 235/255, blue: 227/255))
+                /*Image("Background")
+                    .resizable()
                     .ignoresSafeArea()
+                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                    .opacity(0.6)*/
+                
+                Rectangle()
+                    .ignoresSafeArea()
+                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
                 
                 VStack{
                     QuoteView(random: $random)
@@ -45,10 +51,10 @@ struct HomeView: View {
                         }){
                                                         
                             Image(systemName: "goforward")
-                                .font(.title)
+                                .font(.largeTitle)
                                 .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
                         }
-                        .frame(width: 80, height: 80)
+                        .frame(width: 75, height: 75)
                         .background(Color(UIColor(named: "newPurple")!))
                         .clipShape(Circle())
                         
