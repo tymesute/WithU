@@ -56,7 +56,7 @@ struct AboutView: View {
                         Divider()
                         
                         VStack(alignment: .leading, spacing: 12){
-                            Text("✏️ Project Description")
+                            Text("✏️ About WithU")
                                 .bold()
                             
                             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...")
@@ -73,7 +73,7 @@ struct AboutView: View {
                             Text("Prime Minister’s Health Innovation Award 2021 ")
                         }.padding(.top)
                                                 
-                    }.padding([.leading, .trailing], 20)
+                    }.padding([.leading, .trailing])
                     
                     VStack(alignment: .leading){
                         Divider()
@@ -89,13 +89,13 @@ struct AboutView: View {
                             Text("Facebook Page: CryingCloudth")
                             Text("Line OA: ")
                             Text("Line Group Chat: ")
-                            Text("Email: Cryingcloud.th@gmail.com")
+                            Text("Email: cryingcloud.th@gmail.com")
                             
                         }.padding(.top)
                         
                         Divider()
                         
-                    }.padding([.leading, .trailing], 25)
+                    }.padding([.leading, .trailing])
                     
                 }.navigationTitle("About Us")
             }

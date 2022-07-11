@@ -9,29 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    init() {
-        //UITabBar.appearance().barTintColor = UIColor.white
-
-        }
+    
 
     var body: some View {
     
-        //TabView{
-            HomeView()
-                .tabItem {
-                    Image(systemName: "quote.bubble.fill")
-                    Text("Quotes")
-                }
-            
-            /*AboutView()
-                .tabItem {
-                    Image(systemName: "cloud.fill")
-                    Text("About Us")
-                }*/
-            
-            
-        //}
-        //.accentColor(.black)
+        HomeView()
     }
 }
 

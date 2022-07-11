@@ -47,7 +47,7 @@ struct QuoteWidgetEntryView : View {
             Color.white.edgesIgnoringSafeArea(.all)
             Image(entry.quotes)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .ignoresSafeArea()
         }
     }
 }
@@ -60,8 +60,9 @@ struct QuoteWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             QuoteWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Crying Cloud")
-        .description("Decorate your home screen with inspiring quotes from the Crying Cloud community.")
+        .configurationDisplayName("WithÜ by Crying Cloud")
+        .description("ตกแต่งหน้าจอโฮมด้วยข้อความเพิ่มกำลังใจ")
+        .supportedFamilies([.systemSmall, .systemLarge])
     }
 }
 

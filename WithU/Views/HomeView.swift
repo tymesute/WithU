@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
     
     @State var manualSheet = false
@@ -27,22 +28,24 @@ struct HomeView: View {
         
         NavigationView{
             ZStack{
+                
                 //Background
-                Image("Background2")
+                /*Image("Background3")
                     .resizable()
                     .ignoresSafeArea()
+                    .opacity(0.7)*/
                     
                 
-                /*Rectangle()
+                Rectangle()
                     .ignoresSafeArea()
-                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))*/
+                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
                 
                 VStack{
                     QuoteView(random: $random)
                         .cornerRadius(30)
                 }
                 .scaledToFit()
-                .shadow(color: .black, radius: 2, x: 3, y: 3)
+                .shadow(color: .black, radius: 4, x: 4, y: 4)
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 120)
                 
@@ -81,7 +84,7 @@ struct HomeView: View {
                                     Image(systemName: "square.and.arrow.down")
                                 }
                             }
-                        }.shadow(color: .black, radius: 2, x: 3, y: 3)
+                        }.shadow(color: .black, radius: 4, x: 4, y: 4)
                         .padding()
                         
                     }.padding()
@@ -94,7 +97,7 @@ struct HomeView: View {
             }.onAppear{
                 self.random = chooseRandomImage()
             }
-            .navigationTitle("Crying Cloud")
+            .navigationTitle("WithÜ")
            
             
             .toolbar{
@@ -171,5 +174,6 @@ extension View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            
     }
 }

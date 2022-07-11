@@ -191,6 +191,8 @@
 				6C9A906928697A39005D5F6D /* PBXTargetDependency */,
 			);
 			name = WithU;
+			packageProductDependencies = (
+			);
 			productName = CryingCloud;
 			productReference = 6CF6923C27F42A0900A0D9F3 /* WithU.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +224,8 @@
 				Base,
 			);
 			mainGroup = 6CF6923327F42A0800A0D9F3;
+			packageReferences = (
+			);
 			productRefGroup = 6CF6923D27F42A0900A0D9F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
