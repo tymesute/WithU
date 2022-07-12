@@ -44,7 +44,7 @@ struct HomeView: View {
                         .cornerRadius(30)
                 }
                 .scaledToFit()
-                .shadow(color: .black, radius: 4, x: 4, y: 4)
+                .shadow(color: .black, radius: 3, x: 3, y: 3)
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 120)
                 
@@ -61,7 +61,8 @@ struct HomeView: View {
                                 .foregroundColor(.black)
                         }
                         .frame(width: 75, height: 75)
-                        .background(Color(red: 238/255, green: 235/255, blue: 227/255))
+                        .background(Color(red: 238/255, green: 235/255, blue: 225/255))
+                        
                         
                         .clipShape(Circle())
                         .contentShape(.contextMenuPreview, Circle())
@@ -84,7 +85,7 @@ struct HomeView: View {
                                 }
                             }
                         }
-                        .shadow(color: .black, radius: 4, x: 4, y: 4)
+                        .shadow(color: .black, radius: 3, x: 3, y: 3)
                         .padding()
                         
                         
