@@ -20,7 +20,7 @@ struct AboutView: View {
                         Image("CCLogo")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .scaleEffect(0.8)
+                            .scaleEffect(0.6)
                         
                         //Our Mission
                         VStack(alignment: .leading, spacing: 12){
@@ -33,14 +33,14 @@ struct AboutView: View {
                         Divider()
                         
                         //Our Goals
-                        VStack(alignment: .leading, spacing: 12){
+                        /*VStack(alignment: .leading, spacing: 12){
                             Text("🎯 Our Goals")
                                 .bold()
                             
                             //Change to Thai
                             Text("Connecting volunteer psychologists and therapists to Thai teens for an affordable price, or for free")
                             
-                        }.padding(.top)
+                        }.padding(.top)*/
                         
                         Divider()
                         
@@ -59,7 +59,7 @@ struct AboutView: View {
                             Text("✏️ About WithU")
                                 .bold()
                             
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...")
+                            Text("แอพพลิเคชั่น WithÜ เป็นผลงานเล็กๆของโปรเจค Crying Cloud โดยมีวัตถุประสงค์ในการเติมกำลังใจให้กับชีวิตประจำวันของคุณผ่านวิดเจ็ตรูปภาพที่สุ่มแสดงคำเพิ่มพลังใจจาก Creator และ Local Artist ในประเทศไทยที่ดังบนเพจ IG ")
     
                         }.padding(.top)
 

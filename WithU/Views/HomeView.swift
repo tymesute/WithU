@@ -15,7 +15,7 @@ struct HomeView: View {
 
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
-    var quotes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+    
     
     init(){
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(.black)]
@@ -30,15 +30,14 @@ struct HomeView: View {
             ZStack{
                 
                 //Background
-                /*Image("Background3")
+                Image("Background3")
                     .resizable()
                     .ignoresSafeArea()
-                    .opacity(0.7)*/
-                    
+                    .opacity(0.5)
                 
-                Rectangle()
+                /*Rectangle()
                     .ignoresSafeArea()
-                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))
+                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))*/
                 
                 VStack{
                     QuoteView(random: $random)
@@ -63,29 +62,31 @@ struct HomeView: View {
                         }
                         .frame(width: 75, height: 75)
                         .background(Color(red: 238/255, green: 235/255, blue: 227/255))
+                        
                         .clipShape(Circle())
-                        
-                        
+                        .contentShape(.contextMenuPreview, Circle())
                         .contextMenu{
                             VStack{
-                                Button(action:{
+                                /*Button(action:{
                                     //
                                 }){
                                     Text("Share")
                                     Image(systemName: "square.and.arrow.up")
-                                }
+                                }*/
                                 
                                 Button(action:{
                                     let pic = QuoteView(random: $random).snapshot()
-                                    
+                                
                                     UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
                                 }){
                                     Text("Save quote to library")
                                     Image(systemName: "square.and.arrow.down")
                                 }
                             }
-                        }.shadow(color: .black, radius: 4, x: 4, y: 4)
+                        }
+                        .shadow(color: .black, radius: 4, x: 4, y: 4)
                         .padding()
+                        
                         
                     }.padding()
                    
