@@ -80,9 +80,11 @@ struct HomeView: View {
                                 
                                     UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
                                 }){
-                                    Text("Save quote to library")
+                                    Text("Save to library")
                                     Image(systemName: "square.and.arrow.down")
                                 }
+                                
+
                             }
                         }
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
