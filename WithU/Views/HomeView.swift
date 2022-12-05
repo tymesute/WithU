@@ -35,9 +35,6 @@ struct HomeView: View {
                     .ignoresSafeArea()
                     .opacity(0.5)
                 
-                /*Rectangle()
-                    .ignoresSafeArea()
-                    .foregroundColor(Color(red: 238/255, green: 235/255, blue: 227/255))*/
                 
                 VStack{
                     QuoteView(random: $random)
