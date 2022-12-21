@@ -30,7 +30,7 @@ struct HomeView: View {
             ZStack{
                 
                 //Background
-                Image("Background3")
+                Image("Background4")
                     .resizable()
                     .ignoresSafeArea()
                     .opacity(0.5)
