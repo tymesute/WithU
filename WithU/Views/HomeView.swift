@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 
 struct HomeView: View {
     
     @State var manualSheet = false
     @State var aboutUsSheet = false
-
+    
     @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
     
@@ -36,12 +37,16 @@ struct HomeView: View {
                     .opacity(0.5)
                 
                 
-                VStack{
+                VStack(){
                     QuoteView(random: $random)
                         .cornerRadius(30)
+                        .scaledToFit()
+                        .shadow(color: .black, radius: 3, x: 3, y: 3)
+                        .padding(.bottom)
+                    
+                    BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                        .frame(height: 50)
                 }
-                .scaledToFit()
-                .shadow(color: .black, radius: 3, x: 3, y: 3)
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 120)
                 
@@ -52,7 +57,7 @@ struct HomeView: View {
                         Button(action: {
                             self.random = chooseRandomImage()
                         }){
-                                                        
+                            
                             Image(systemName: "goforward")
                                 .font(.largeTitle)
                                 .foregroundColor(.black)
@@ -65,23 +70,16 @@ struct HomeView: View {
                         .contentShape(.contextMenuPreview, Circle())
                         .contextMenu{
                             VStack{
-                                /*Button(action:{
-                                    //
-                                }){
-                                    Text("Share")
-                                    Image(systemName: "square.and.arrow.up")
-                                }*/
-                                
+                            
                                 Button(action:{
                                     let pic = QuoteView(random: $random).snapshot()
-                                
+                                    
                                     UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
                                 }){
                                     Text("Save to library")
                                     Image(systemName: "square.and.arrow.down")
                                 }
                                 
-
                             }
                         }
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
@@ -89,33 +87,26 @@ struct HomeView: View {
                         
                         
                     }.padding()
-                   
+                    
                     
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                     .padding()
                 
-                        
+                
             }.onAppear{
                 self.random = chooseRandomImage()
             }
             .navigationTitle("WithÜ")
-           
+            
             
             .toolbar{
-                /*ToolbarItem(placement: .navigationBarLeading){
-                    Image("Logo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    
-                }*/
-                
                 ToolbarItemGroup(placement: .navigationBarTrailing){
                     
                     Button(action: {manualSheet.toggle()}){
                         Image(systemName: "questionmark")
                             .foregroundColor(.black)
                             .scaleEffect(1.2)
-                            
+                        
                     }.sheet(isPresented: $manualSheet) {
                         ManualView()
                     }
@@ -129,20 +120,10 @@ struct HomeView: View {
                     }
                     
                 }
-            
+                
             }
         }
     }
-    
-    
-    /*func shareButton() {
-        isShareSheetShowing.toggle()
-        let url = URL(string: "https://youtu.be/EBc1OjRrJjs")
-        let av = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
-        
-        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
-    }*/
-    
     
     func chooseRandomImage() -> String {
         let array = quotes
@@ -175,6 +156,7 @@ extension View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            
+        
     }
 }
+
