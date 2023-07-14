@@ -32,6 +32,10 @@ struct ManualView: View {
                                 Text("4. เมื่อคุณเห็นขนาดที่คุณต้องการ ให้แตะ เพิ่มวิดเจ็ต")
                                 
                                 Text("5. ในระหว่างที่แอปยังคงสั่นอยู่ ให้ย้ายวิดเจ็ตไปยังตำแหน่งที่คุณต้องการบนหน้าจอ จากนั้นแตะ เสร็จสิ้น")
+                                
+                                BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                                    .frame(height: 50)
+                                
                             }.padding(.top)
 
                             
@@ -57,7 +61,11 @@ struct ManualView: View {
                             Text("ข้อมูลจาก Apple")
                                 .font(.caption)
                             
+                            BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                                .frame(height: 50)
+                            
                         }.padding([.leading, .trailing], 25)
+                        
                     }
                     
                     

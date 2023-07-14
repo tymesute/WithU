@@ -30,17 +30,6 @@ struct AboutView: View {
                             Text("โปรเจค Crying Cloud มีเป้าหมายในการเพิ่มความเข้าถึงการรักษาภาวะซึมเศร้าที่เหมาะสม ให้กับวัยรุ่นไทยที่เสี่ยงซึมเศร้า โดยสามารถปรึกษาจิตแพทย์หรือนักฟังเชิงลึกออนไลน์ได้ทั่วประเทศ")
                         }.padding(.top)
                         
-                        Divider()
-                        
-                        //Our Goals
-                        /*VStack(alignment: .leading, spacing: 12){
-                            Text("🎯 Our Goals")
-                                .bold()
-                            
-                            //Change to Thai
-                            Text("Connecting volunteer psychologists and therapists to Thai teens for an affordable price, or for free")
-                            
-                        }.padding(.top)*/
                         
                         Divider()
                         
@@ -53,7 +42,8 @@ struct AboutView: View {
     
                         }.padding(.top)
                         
-                        Divider()
+                        BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                            .frame(height: 50)
                         
                         VStack(alignment: .leading, spacing: 12){
                             Text("✏️ About WithU")
@@ -93,7 +83,8 @@ struct AboutView: View {
                             
                         }.padding(.top)
                         
-                        Divider()
+                        BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                            .frame(height: 50)
                         
                     }.padding([.leading, .trailing])
                     

@@ -13,8 +13,6 @@ struct HomeView: View {
     
     @State var manualSheet = false
     @State var aboutUsSheet = false
-    
-    @State var isShareSheetShowing: Bool = false
     @State var random: String = ""
     
     
@@ -37,7 +35,8 @@ struct HomeView: View {
                     .opacity(0.5)
                 
                 
-                VStack(){
+                VStack{
+                    
                     QuoteView(random: $random)
                         .cornerRadius(30)
                         .scaledToFit()
@@ -46,61 +45,86 @@ struct HomeView: View {
                     
                     BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
                         .frame(height: 50)
+
+                    
                 }
                 .padding([.leading, .trailing], 25)
-                .padding(.bottom, 120)
+                .padding(.bottom, 150)
                 
                 
                 //Reload button
-                ZStack{
-                    HStack {
-                        Button(action: {
-                            self.random = chooseRandomImage()
-                        }){
+                VStack{
+                    ZStack{
+                        HStack{
                             
-                            Image(systemName: "goforward")
-                                .font(.largeTitle)
-                                .foregroundColor(.black)
-                        }
-                        .frame(width: 75, height: 75)
-                        .background(Color(red: 238/255, green: 235/255, blue: 225/255))
-                        
-                        
-                        .clipShape(Circle())
-                        .contentShape(.contextMenuPreview, Circle())
-                        .contextMenu{
-                            VStack{
-                            
-                                Button(action:{
-                                    let pic = QuoteView(random: $random).snapshot()
-                                    
-                                    UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
-                                }){
-                                    Text("Save to library")
-                                    Image(systemName: "square.and.arrow.down")
-                                }
+                            Button(action: {
+                                self.random = chooseRandomImage()
+                            }){
                                 
+                                Image(systemName: "goforward")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.black)
                             }
+                            .frame(width: 75, height: 75)
+                            .background(Color(red: 238/255, green: 235/255, blue: 225/255))
+                            .clipShape(Circle())
+                            .contentShape(.contextMenuPreview, Circle())
+                            /*.contextMenu{
+                                VStack{
+                                    
+                                    Button(action:{
+                                        let pic = QuoteView(random: $random).snapshot()
+                                        
+                                        UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
+                                    }){
+                                        Text("Save to library")
+                                        Image(systemName: "square.and.arrow.down")
+                                    }
+                                    
+                                }
+                            }*/                            .shadow(color: .black, radius: 3, x: 3, y: 3)
+                            .padding()
+                        }.padding([.leading, .trailing, .top])
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+                    
+                    
+                    Button(action:{
+                     
+                        let pic = QuoteView(random: $random).snapshot()
+                        
+                        UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
+                    }){
+                        if #available(iOS 16.0, *) {
+                            HStack{
+                                Text("Save to libary")
+                                Image(systemName: "square.and.arrow.down")
+                            }.foregroundColor(.black)
+                                .fontWeight(.bold)
+                        } else {
+                            // Fallback on earlier versions
                         }
-                        .shadow(color: .black, radius: 3, x: 3, y: 3)
-                        .padding()
-                        
-                        
-                    }.padding()
-                    
-                    
-                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
-                    .padding()
-                
+                    }
+
+                }
+    
                 
             }.onAppear{
                 self.random = chooseRandomImage()
             }
-            .navigationTitle("WithÜ")
+            .navigationTitle("WithU")
             
             
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarTrailing){
+                    
+                    /*Button(action:{
+                     let pic = QuoteView(random: $random).snapshot()
+                     
+                     UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
+                     }){
+                     Image(systemName: "square.and.arrow.down")
+                     }.foregroundColor(.black)
+                     .scaleEffect(1.2)*/
                     
                     Button(action: {manualSheet.toggle()}){
                         Image(systemName: "questionmark")
@@ -118,7 +142,6 @@ struct HomeView: View {
                     }.sheet(isPresented: $aboutUsSheet) {
                         AboutView()
                     }
-                    
                 }
                 
             }
