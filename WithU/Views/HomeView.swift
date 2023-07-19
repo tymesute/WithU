@@ -14,13 +14,11 @@ struct HomeView: View {
     @State var manualSheet = false
     @State var aboutUsSheet = false
     @State var random: String = ""
+    @State var isSaved: Bool = false
     
-    
-    init(){
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(.black)]
-        
-        //Add Swiftfx package
-        //UINavigationBar.appearance().largeTitleTextAttributes
+    private var fullScreenAd: Interstitial?
+    init() {
+        fullScreenAd = Interstitial()
     }
     
     var body: some View {
@@ -34,9 +32,7 @@ struct HomeView: View {
                     .ignoresSafeArea()
                     .opacity(0.5)
                 
-                
                 VStack{
-                    
                     QuoteView(random: $random)
                         .cornerRadius(30)
                         .scaledToFit()
@@ -45,12 +41,9 @@ struct HomeView: View {
                     
                     BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
                         .frame(height: 50)
-
-                    
                 }
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 150)
-                
                 
                 //Reload button
                 VStack{
@@ -70,61 +63,63 @@ struct HomeView: View {
                             .clipShape(Circle())
                             .contentShape(.contextMenuPreview, Circle())
                             /*.contextMenu{
-                                VStack{
-                                    
-                                    Button(action:{
-                                        let pic = QuoteView(random: $random).snapshot()
-                                        
-                                        UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
-                                    }){
-                                        Text("Save to library")
-                                        Image(systemName: "square.and.arrow.down")
-                                    }
-                                    
-                                }
-                            }*/                            .shadow(color: .black, radius: 3, x: 3, y: 3)
-                            .padding()
+                             VStack{
+                             
+                             Button(action:{
+                             let pic = QuoteView(random: $random).snapshot()
+                             
+                             UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
+                             }){
+                             Text("Save to library")
+                             Image(systemName: "square.and.arrow.down")
+                             }
+                             
+                             }
+                             }*/                            .shadow(color: .black, radius: 3, x: 3, y: 3)
+                                .padding()
                         }.padding([.leading, .trailing, .top])
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                     
                     
                     Button(action:{
-                     
+                        
+                        self.isSaved = true
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                            self.fullScreenAd?.showAd()
+                            self.isSaved = false
+                        }
+                        
                         let pic = QuoteView(random: $random).snapshot()
                         
                         UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
                     }){
-                        if #available(iOS 16.0, *) {
-                            HStack{
-                                Text("Save to libary")
-                                Image(systemName: "square.and.arrow.down")
-                            }.foregroundColor(.black)
-                                .fontWeight(.bold)
-                        } else {
-                            // Fallback on earlier versions
+                        
+                        if !isSaved{
+                            if #available(iOS 16.0, *) {
+                                HStack {
+                                    Text("Save to libary")
+                                    Image(systemName: "square.and.arrow.down")
+                                }.fontWeight(.bold)
+                            } else {
+                                // Fallback on earlier versions
+                            }
+                        }else{
+                            Text("✅")
                         }
                     }
-
+                    
+                }.onAppear {
+                    GADMobileAds.sharedInstance().start(completionHandler: nil)
                 }
-    
                 
             }.onAppear{
                 self.random = chooseRandomImage()
             }
             .navigationTitle("WithU")
-            
-            
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarTrailing){
                     
-                    /*Button(action:{
-                     let pic = QuoteView(random: $random).snapshot()
-                     
-                     UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
-                     }){
-                     Image(systemName: "square.and.arrow.down")
-                     }.foregroundColor(.black)
-                     .scaleEffect(1.2)*/
                     
                     Button(action: {manualSheet.toggle()}){
                         Image(systemName: "questionmark")
@@ -154,6 +149,24 @@ struct HomeView: View {
         let result = array.randomElement()!
         
         return result
+    }
+    
+    func showInterstitialAd() {
+        let adUnitID = "ca-app-pub-3940256099942544/4411468910"
+        let request = GADRequest()
+        
+        GADInterstitialAd.load(withAdUnitID: adUnitID, request: request) { (ad, error) in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            
+            if let interstitial = ad {
+                interstitial.present(fromRootViewController: (UIApplication.shared.windows.first?.rootViewController)!)
+            } else {
+                print("Failed to create interstitial ad.")
+            }
+        }
     }
     
 }
