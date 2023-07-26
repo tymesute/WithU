@@ -8,6 +8,9 @@
 import SwiftUI
 import GoogleMobileAds
 
+//Note for next update
+//Update marketing URL with app ads.txt
+//Edit description (แก้ widget)
 
 struct HomeView: View {
     

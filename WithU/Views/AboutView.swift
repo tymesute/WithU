@@ -42,7 +42,7 @@ struct AboutView: View {
     
                         }.padding(.top)
                         
-                        BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                        BannerAd(unitID: "ca-app-pub-1001544708613935/5477889782")
                             .frame(height: 50)
                         
                         VStack(alignment: .leading, spacing: 12){
@@ -83,7 +83,7 @@ struct AboutView: View {
                             
                         }.padding(.top)
                         
-                        BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
+                        BannerAd(unitID: "ca-app-pub-1001544708613935/5477889782")
                             .frame(height: 50)
                         
                     }.padding([.leading, .trailing])
