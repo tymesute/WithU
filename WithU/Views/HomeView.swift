@@ -51,57 +51,40 @@ struct HomeView: View {
                 //Reload button
                 VStack{
                     ZStack{
-                        HStack{
-                            
-                            Button(action: {
-                                self.random = chooseRandomImage()
-                            }){
-                                
-                                Image(systemName: "goforward")
-                                    .font(.largeTitle)
-                                    .foregroundColor(.black)
-                            }
-                            .frame(width: 75, height: 75)
-                            .background(Color(red: 238/255, green: 235/255, blue: 225/255))
-                            .clipShape(Circle())
-                            .contentShape(.contextMenuPreview, Circle())
-                            /*.contextMenu{
-                             VStack{
-                             
-                             Button(action:{
-                             let pic = QuoteView(random: $random).snapshot()
-                             
-                             UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
-                             }){
-                             Text("Save to library")
-                             Image(systemName: "square.and.arrow.down")
-                             }
-                             
-                             }
-                             }*/                            .shadow(color: .black, radius: 3, x: 3, y: 3)
-                                .padding()
-                        }.padding([.leading, .trailing, .top])
+                        Button(action: {
+                            self.random = chooseRandomImage()
+                        }){
+                            Image(systemName: "goforward")
+                                .font(.largeTitle)
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 75, height: 75)
+                        .background(Color(red: 238/255, green: 235/255, blue: 225/255))
+                        .clipShape(Circle())
+                        .contentShape(.contextMenuPreview, Circle())
+                        .shadow(color: .black, radius: 3, x: 3, y: 3)
+                        .padding()
+                        .padding([.leading, .trailing, .top])
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                     
                     
+                    
+                    //Save to library button
                     Button(action:{
-                        
                         self.isSaved = true
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                             self.fullScreenAd?.showAd()
                             self.isSaved = false
                         }
-                        
                         let pic = QuoteView(random: $random).snapshot()
                         
                         UIImageWriteToSavedPhotosAlbum(pic, nil, nil, nil)
                     }){
-                        
                         if !isSaved{
                             if #available(iOS 16.0, *) {
                                 HStack {
-                                    Text("Save to libary")
+                                    Text("Save to library")
                                     Image(systemName: "square.and.arrow.down")
                                 }.fontWeight(.bold)
                             } else {
