@@ -42,7 +42,7 @@ struct HomeView: View {
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
                         .padding(.bottom)
                     
-                    BannerAd(unitID: "ca-app-pub-1001544708613935/5477889782")
+                    BannerAd(unitID: "ca-app-pub-4843421358422664/5860875346")
                         .frame(height: 50)
                 }
                 .padding([.leading, .trailing], 25)
