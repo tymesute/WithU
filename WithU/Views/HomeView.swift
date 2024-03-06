@@ -42,7 +42,7 @@ struct HomeView: View {
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
                         .padding(.bottom)
                     
-                    BannerAd(unitID: "ca-app-pub-8151989852233593/7117806604")
+                    BannerAd(unitID: "ca-app-pub-7908551774905830/7167269847")
                         .frame(height: 50)
                 }
                 .padding([.leading, .trailing], 25)
@@ -148,7 +148,12 @@ struct HomeView: View {
             }
             
             if let interstitial = ad {
-                interstitial.present(fromRootViewController: (UIApplication.shared.windows.first?.rootViewController)!)
+                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                   let rootViewController = windowScene.windows.first?.rootViewController {
+                    interstitial.present(fromRootViewController: rootViewController)
+                } else {
+                    print("Failed to get a valid window scene or root view controller.")
+                }
             } else {
                 print("Failed to create interstitial ad.")
             }

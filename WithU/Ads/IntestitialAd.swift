@@ -19,7 +19,7 @@ final class Interstitial:NSObject, GADFullScreenContentDelegate {
     
     func loadInterstitial(){
         let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-8151989852233593/5421581552",
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-7908551774905830/9921425696",
                                request: request,
                                completionHandler: { [self] ad, error in
             if let error = error {
@@ -31,16 +31,19 @@ final class Interstitial:NSObject, GADFullScreenContentDelegate {
         })
     }
     
-    func showAd(){
-        if self.interstitial != nil {
-            let root = UIApplication.shared.windows.first?.rootViewController
-            self.interstitial?.present(fromRootViewController: root!)
-        }
-        else{
+    func showAd() {
+        if let interstitial = self.interstitial {
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let rootViewController = windowScene.windows.first?.rootViewController {
+                interstitial.present(fromRootViewController: rootViewController)
+            } else {
+                print("Failed to get a valid window scene or root view controller.")
+            }
+        } else {
             print("Not Ready")
         }
     }
-    
+
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         print("Ad did dismiss full screen content.")
         self.loadInterstitial()

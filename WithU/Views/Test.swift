@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TestView: View {
     @State private var isShowingPopup = false
-
+    
     var body: some View {
         VStack {
             Button(action: {
@@ -25,13 +25,14 @@ struct TestView: View {
                                 }
                             }
                             .background(
-                                Text("Button Pressed!")
-                                    .font(.title)
-                                    .padding()
-                                    .background(Color.yellow)
-                                    .cornerRadius(10)
-                                    .animation(.default)
-                                    .transition(.scale)
+                                withAnimation {
+                                    Text("Button Pressed!")
+                                        .font(.title)
+                                        .padding()
+                                        .background(Color.yellow)
+                                        .cornerRadius(10)
+                                        .transition(.scale)
+                                }
                             )
                     }
                 }
