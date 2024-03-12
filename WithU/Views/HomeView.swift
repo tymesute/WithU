@@ -40,10 +40,15 @@ struct HomeView: View {
                         .cornerRadius(30)
                         .scaledToFit()
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
-                        .padding(.bottom)
+                        .padding(.bottom, 8)
                     
-                    BannerAd(unitID: "ca-app-pub-7908551774905830/7167269847")
-                        .frame(height: 50)
+                    VStack(spacing: 5) {
+                        BannerAd(unitID: "ca-app-pub-2443039340976059/3769970377")
+                            .frame(height: 50)
+                        
+                        BannerAd(unitID: "ca-app-pub-2443039340976059/3769970377")
+                            .frame(height: 50)
+                    }
                 }
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 150)
@@ -74,7 +79,7 @@ struct HomeView: View {
                         self.isSaved = true
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                            self.fullScreenAd?.showAd()
+                            //self.fullScreenAd?.showAd()
                             self.isSaved = false
                         }
                         let pic = QuoteView(random: $random).snapshot()

@@ -44,7 +44,6 @@ struct QuoteWidgetEntryView : View {
 
     var body: some View {
         ZStack{
-            Color.white.edgesIgnoringSafeArea(.all)
             Image(entry.quotes)
                 .resizable()
                 .ignoresSafeArea()
