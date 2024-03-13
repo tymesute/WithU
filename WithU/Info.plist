@@ -211,5 +211,9 @@
 	<array>
 		<dict/>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>WithU needs permission to access photos on your device to save the current quote to your library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>WithU needs permission to access photos on your device to save the current quote to your library</string>
 </dict>
 </plist>
