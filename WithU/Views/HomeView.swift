@@ -43,10 +43,10 @@ struct HomeView: View {
                         .padding(.bottom, 8)
                     
                     VStack(spacing: 5) {
-                        BannerAd(unitID: "ca-app-pub-2443039340976059/3769970377")
+                        BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
                             .frame(height: 50)
                         
-                        BannerAd(unitID: "ca-app-pub-2443039340976059/3769970377")
+                        BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
                             .frame(height: 50)
                     }
                 }
