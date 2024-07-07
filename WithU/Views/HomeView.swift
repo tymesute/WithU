@@ -42,13 +42,13 @@ struct HomeView: View {
                         .shadow(color: .black, radius: 3, x: 3, y: 3)
                         .padding(.bottom, 8)
                     
-                    VStack(spacing: 5) {
+                    /*VStack(spacing: 5) {
                         BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
                             .frame(height: 50)
                         
                         BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
                             .frame(height: 50)
-                    }
+                    }*/
                 }
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 150)

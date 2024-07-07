@@ -215,25 +215,5 @@
 	<string>WithU needs permission to access photos on your device to save the current quote to your library</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>WithU needs permission to access photos on your device to save the current quote to your library</string>
-    <key>NSPrivacyAccessedAPITypes</key>
-    <array>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>C617.1</string>
-            </array>
-        </dict>
-        <dict>
-            <key>NSPrivacyAccessedAPIType</key>
-            <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
-            <key>NSPrivacyAccessedAPITypeReasons</key>
-            <array>
-                <string>CA92.1</string>
-                <string>1C8F.1</string>
-            </array>
-        </dict>
-    </array>
 </dict>
 </plist>
