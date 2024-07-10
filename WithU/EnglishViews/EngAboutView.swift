@@ -1,13 +1,13 @@
 //
-//  AboutView.swift
-//  CryingCloud
+//  EngAboutView.swift
+//  WithU
 //
-//  Created by E2318556 on 25/6/2565 BE.
+//  Created by Tyme Suteesopon on 9/7/2567 BE.
 //
 
 import SwiftUI
 
-struct AboutView: View {
+struct EngAboutView: View {
     var body: some View {
         NavigationView{
             ZStack{
@@ -27,7 +27,9 @@ struct AboutView: View {
                             Text("📌 Our Mission")
                                 .bold()
                             
-                            Text("โปรเจค Crying Cloud มีเป้าหมายในการเพิ่มความเข้าถึงการรักษาภาวะซึมเศร้าที่เหมาะสม ให้กับวัยรุ่นไทยที่เสี่ยงซึมเศร้า โดยสามารถปรึกษาจิตแพทย์หรือนักฟังเชิงลึกออนไลน์ได้ทั่วประเทศ")
+                            Text("Crying Cloud, the parent organization of WithU, began with an aim to connect Thai teenagers struggling with mental health issues with volunteer psychologists and therapists at an affordable price, or for free.")
+                            
+                        
                         }.padding(.top)
                         
                         
@@ -38,18 +40,20 @@ struct AboutView: View {
                             Text("🧠 Our Audience")
                                 .bold()
                             
-                            Text("กลุ่มวัยรุ่น นักเรียน นักศึกษา รวมถึงบุคคลทุกวัยที่มีความเครียด หรือเสี่ยงเป็นภาวะซึมเศร้า หรือมีภาวะซึมเศร้า โดยเน้นไปในกลุ่มวัยรุ่น เนื่องจาก เป็นกลุ่มที่มีความเสี่ยงของภาวะซึมเศร้า และอาจจะไม่กล้าาปรึกษาใคร หรือไม่กล้าไปพบจิตแพทย์ในช่วงแรก นวัตกรรมของทีมเราจะช่วยเป็นเหมือนเพื่อนใจของวัยรุ่น และมีทีมแพทย์มาช่วยสนับสนุน")
+                            Text("Criny Cloud works with teenagers, students, and individuals of all ages who are experiencing stress, are at risk, or are currently experiencing depression. We hope to bridge the gap between those under these circumstances with professionals support that may not be widely available to everyone.")
     
                         }.padding(.top)
                         
                         /*BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
                             .frame(height: 50)*/
                         
+                        Divider()
+                        
                         VStack(alignment: .leading, spacing: 12){
                             Text("✏️ About WithU")
                                 .bold()
                             
-                            Text("แอพพลิเคชั่น WithÜ เป็นผลงานเล็กๆของโปรเจค Crying Cloud โดยมีวัตถุประสงค์ในการเติมกำลังใจให้กับชีวิตประจำวันของคุณผ่านวิดเจ็ตรูปภาพที่สุ่มแสดงคำเพิ่มพลังใจจาก Creator และ Local Artist ในประเทศไทยที่ดังบนเพจ IG ")
+                            Text("WithU, is a Thai mental health app aimed at helping struggling teens by sending encouraging messages curated my local Thai digital artists through the app as well as through a widget.")
     
                         }.padding(.top)
 
@@ -94,8 +98,6 @@ struct AboutView: View {
     }
 }
 
-struct AboutView_Previews: PreviewProvider {
-    static var previews: some View {
-        AboutView()
-    }
+#Preview {
+    EngAboutView()
 }

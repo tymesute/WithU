@@ -32,8 +32,8 @@ struct ManualView: View {
                                 
                                 Text("5. ในระหว่างที่แอปยังคงสั่นอยู่ ให้ย้ายวิดเจ็ตไปยังตำแหน่งที่คุณต้องการบนหน้าจอ จากนั้นแตะ เสร็จสิ้น")
                                 
-                                BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
-                                    .frame(height: 50)
+                                /*BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
+                                    .frame(height: 50)*/
                                 
                             }.padding(.top)
 
@@ -60,8 +60,8 @@ struct ManualView: View {
                             Text("ข้อมูลจาก Apple")
                                 .font(.caption)
                             
-                            BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
-                                .frame(height: 50)
+                            /*BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
+                                .frame(height: 50)*/
                             
                         }.padding([.leading, .trailing], 25)
                         
@@ -74,7 +74,7 @@ struct ManualView: View {
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
+struct ManualView_Previews: PreviewProvider {
     static var previews: some View {
         ManualView()
     }

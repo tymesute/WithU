@@ -8,10 +8,6 @@
 import SwiftUI
 import GoogleMobileAds
 
-//Note for next update
-//Update marketing URL with app ads.txt
-//Edit description (แก้ widget)
-
 struct HomeView: View {
     
     @State var manualSheet = false
@@ -19,10 +15,21 @@ struct HomeView: View {
     @State var random: String = ""
     @State var isSaved: Bool = false
     
-    private var fullScreenAd: Interstitial?
-    init() {
-        fullScreenAd = Interstitial()
+    @State var isEnglish: Bool = false
+    
+    //private var fullScreenAd: Interstitial?
+    /*init() {
+     fullScreenAd = Interstitial()
+     }*/
+    
+    var buttonFlag: String {
+        return isEnglish ? "🇺🇸" : "🇹🇭"
     }
+    
+    var manualEng: any View {
+        return isEnglish ? EngManualView() : ManualView()
+    }
+    
     
     var body: some View {
         
@@ -43,12 +50,12 @@ struct HomeView: View {
                         .padding(.bottom, 8)
                     
                     /*VStack(spacing: 5) {
-                        BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
-                            .frame(height: 50)
-                        
-                        BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
-                            .frame(height: 50)
-                    }*/
+                     BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
+                     .frame(height: 50)
+                     
+                     BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
+                     .frame(height: 50)
+                     }*/
                 }
                 .padding([.leading, .trailing], 25)
                 .padding(.bottom, 150)
@@ -101,24 +108,35 @@ struct HomeView: View {
                     }
                     
                 }.onAppear {
-                    GADMobileAds.sharedInstance().start(completionHandler: nil)
+                    /*GADMobileAds.sharedInstance().start(completionHandler: nil)*/
                 }
                 
             }.onAppear{
-                self.random = chooseRandomImage()
+                updateRandomQuote()
             }
             .navigationTitle("WithU")
             .toolbar{
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Toggle(buttonFlag, isOn: $isEnglish)
+                        .toggleStyle(SwitchToggleStyle())
+                        .onChange(of: isEnglish) { _ in
+                            self.random = chooseRandomImage()
+                        }
+                }
+                
                 ToolbarItemGroup(placement: .navigationBarTrailing){
-                    
-                    
                     Button(action: {manualSheet.toggle()}){
                         Image(systemName: "questionmark")
                             .foregroundColor(.black)
                             .scaleEffect(1.2)
                         
                     }.sheet(isPresented: $manualSheet) {
-                        ManualView()
+                        if isEnglish {
+                            EngManualView()
+                        } else {
+                            ManualView()
+                        }
                     }
                     
                     Button(action: {aboutUsSheet.toggle()}){
@@ -126,7 +144,11 @@ struct HomeView: View {
                             .foregroundColor(.black)
                             .scaleEffect(1.2)
                     }.sheet(isPresented: $aboutUsSheet) {
-                        AboutView()
+                        if isEnglish {
+                            EngAboutView()
+                        } else {
+                            AboutView()
+                        }
                     }
                 }
                 
@@ -135,35 +157,37 @@ struct HomeView: View {
     }
     
     func chooseRandomImage() -> String {
-        let array = quotes
-        
-        let result = array.randomElement()!
-        
-        return result
+            return isEnglish ? (quotes2.randomElement() ?? "1.01") : (quotes.randomElement() ?? "1")
+        }
+    
+    func updateRandomQuote() {
+        self.random = chooseRandomImage()
     }
     
-    func showInterstitialAd() {
-        let adUnitID = "ca-app-pub-3940256099942544/4411468910"
-        let request = GADRequest()
-        
-        GADInterstitialAd.load(withAdUnitID: adUnitID, request: request) { (ad, error) in
-            if let error = error {
-                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                return
-            }
-            
-            if let interstitial = ad {
-                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                   let rootViewController = windowScene.windows.first?.rootViewController {
-                    interstitial.present(fromRootViewController: rootViewController)
-                } else {
-                    print("Failed to get a valid window scene or root view controller.")
-                }
-            } else {
-                print("Failed to create interstitial ad.")
-            }
-        }
-    }
+    
+    
+    /*func showInterstitialAd() {
+     let adUnitID = "ca-app-pub-3940256099942544/4411468910"
+     let request = GADRequest()
+     
+     GADInterstitialAd.load(withAdUnitID: adUnitID, request: request) { (ad, error) in
+     if let error = error {
+     print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+     return
+     }
+     
+     if let interstitial = ad {
+     if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+     let rootViewController = windowScene.windows.first?.rootViewController {
+     interstitial.present(fromRootViewController: rootViewController)
+     } else {
+     print("Failed to get a valid window scene or root view controller.")
+     }
+     } else {
+     print("Failed to create interstitial ad.")
+     }
+     }
+     }*/
     
 }
 
