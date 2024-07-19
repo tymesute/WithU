@@ -18,26 +18,31 @@ struct EngManualView: View {
                 ScrollView{
                     VStack{
                         VStack(alignment: .leading, spacing: 15){
-                            Text("How to add widgets to your Lock Screen")
+                            Text("How to add widgets to your Home Screen")
                                 .bold()
                             
-                            Text("1. Touch and hold the Lock Screen until the Customize button appears, then tap Customize.")
+                            Text("1. From the Home Screen, touch and hold a widget or an empty area until the apps jiggle.")
                             
-                            Text("2. Select Lock Screen.")
+                            Text("2. Tap the '+' button in the upper-left corner.")
                             
-                            Text("3. Tap Add Widgets.")
+                            Text("3. Select a widget, choose a widget size, then tap Add Widget.")
                             
-                            Text("4. Tap or drag the widgets that you want to add to the Lock Screen.")
-                            
-                            Text("5. When you're finished, tap the close buttonn, then tap Done.")
+                            Text("4. Tap Done.")
                             
                             /*BannerAd(unitID: "ca-app-pub-2443039340976059/5649210010")
                              .frame(height: 50)*/
-                            
                         }.padding(.top)
                         
                         
                         Image("Widget")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 400)
+                            .padding([.top, .bottom])
+                        
+                        Text("To select English Widgets, scroll to your preferred language of choice.")
+                        
+                        Image("Widget2")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 400)
