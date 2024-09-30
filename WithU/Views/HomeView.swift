@@ -14,7 +14,6 @@ struct HomeView: View {
     @State var aboutUsSheet = false
     @State var random: String = ""
     @State var isSaved: Bool = false
-    
     @State var isEnglish: Bool = false
     
     //private var fullScreenAd: Interstitial?
@@ -113,6 +112,7 @@ struct HomeView: View {
                 
             }.onAppear{
                 updateRandomQuote()
+                
             }
             .navigationTitle("WithU")
             .toolbar{
@@ -153,12 +153,16 @@ struct HomeView: View {
                 }
                 
             }
+        }.onAppear {
+            //notification
+            allowNotification()
+            configureNotification()
         }
     }
     
     func chooseRandomImage() -> String {
-            return isEnglish ? (quotes2.randomElement() ?? "1.01") : (quotes.randomElement() ?? "1")
-        }
+        return isEnglish ? (quotes2.randomElement() ?? "1.01") : (quotes.randomElement() ?? "1")
+    }
     
     func updateRandomQuote() {
         self.random = chooseRandomImage()

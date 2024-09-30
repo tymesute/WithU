@@ -13,3 +13,49 @@ var quotes2 = ["1.01", "1.02", "1.03", "1.04", "1.05", "1.06", "1.07", "1.08", "
                "1.11", "1.12", "1.13", "1.14", "1.15", "1.16", "1.17", "1.18", "1.19", "1.20",
                "1.21", "1.22", "1.23", "1.24", "1.25", "1.26", "1.27", "1.28", "1.29", "1.30", "1.31"]
 
+var notificationQuotes = [
+  "It's okay to not be okay. Take it one step at a time.",
+  "You are stronger than the storms you're facing.",
+  "Healing is not linear, and that's okay.",
+  "You deserve peace, even when it's hard to find.",
+  "Your feelings are valid, no matter what.",
+  "Just because you're struggling doesn't mean you're failing.",
+  "Take a deep breath. You're doing your best, and that's enough.",
+  "Even on your darkest days, you're worth fighting for.",
+  "You are not your thoughts. You are so much more.",
+  "It's okay to rest. Your mental health matters.",
+  "You don't have to do it all today. One step at a time.",
+  "Progress is progress, no matter how small.",
+  "You are worthy of love and care, especially from yourself.",
+  "The bravest thing you can do is keep going.",
+  "Your mind is a garden—tend to it with kindness.",
+  "You are not alone in this. Help is always within reach.",
+  "Sometimes the most productive thing you can do is rest.",
+  "Your story isn't over. There are brighter days ahead.",
+  "It's okay to ask for help. You're worth it.",
+  "You don’t have to be perfect to be deserving of love and peace.",
+  "Your journey is your own, and it's okay to move at your own pace.",
+  "You are not your struggles; you are the strength that rises from them.",
+  "It’s okay to feel lost sometimes; it means you're finding your way.",
+  "In your toughest moments, remember how far you've already come.",
+  "Even on hard days, you are still worthy of kindness and care.",
+  "It’s okay to pause. Self-care is not selfish—it's essential.",
+  "You are a survivor of your darkest moments, and that makes you strong.",
+  "Be gentle with yourself. Growth takes time, and healing isn’t a race.",
+  "The storms will pass, and you will find the sunshine again.",
+  "You are allowed to take up space, to rest, and to heal at your own pace.",
+  "Your emotions matter, and it's okay to let them show.",
+  "Every small step forward is a victory worth celebrating.",
+  "You deserve love, not just from others but from yourself, too.",
+  "Your mental health is a priority, not a burden.",
+  "Healing is not about becoming someone new, but loving who you are now.",
+  "It's okay to have setbacks; they don't erase your progress.",
+  "You are enough, just as you are, in this very moment.",
+  "No matter how difficult today is, tomorrow is a new chance to begin again."
+];
+
+
+
+
+
+

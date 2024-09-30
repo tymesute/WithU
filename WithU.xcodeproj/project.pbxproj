@@ -32,6 +32,8 @@
 		CC99202C2A5B1D0D004867D9 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC99202B2A5B1D0D004867D9 /* Test.swift */; };
 		CCB1018B2A667C1E004580E9 /* IntestitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB1018A2A667C1E004580E9 /* IntestitialAd.swift */; };
 		CCD8C9322A31B608000DCBD1 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8C9312A31B608000DCBD1 /* BannerAd.swift */; };
+		CCE305642C9CB72500CFF89C /* NotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE305632C9CB72500CFF89C /* NotificationTest.swift */; };
+		CCE305662C9CBC2800CFF89C /* QuotesNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE305652C9CBC2800CFF89C /* QuotesNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		CC99202B2A5B1D0D004867D9 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CCB1018A2A667C1E004580E9 /* IntestitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntestitialAd.swift; sourceTree = "<group>"; };
 		CCD8C9312A31B608000DCBD1 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		CCE305632C9CB72500CFF89C /* NotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTest.swift; sourceTree = "<group>"; };
+		CCE305652C9CBC2800CFF89C /* QuotesNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesNotification.swift; sourceTree = "<group>"; };
 		E0F2DD5655298AEA5392D259 /* Pods_WithU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WithU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D7DC85C7855CBDE198E065 /* Pods_QuoteWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuoteWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12438EE5DA6582BCC279898 /* Pods-QuoteWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-QuoteWidgetExtension/Pods-QuoteWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				6C964358287C7BB7009C447E /* Quotes.swift */,
+				CCE305652C9CBC2800CFF89C /* QuotesNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				6CF6924327F42A0B00A0D9F3 /* Assets.xcassets */,
 				6CF6924527F42A0B00A0D9F3 /* Preview Content */,
 				CC951E612BA78E220076523A /* PrivacyInfo.xcprivacy */,
+				CCE305632C9CB72500CFF89C /* NotificationTest.swift */,
 			);
 			path = WithU;
 			sourceTree = "<group>";
@@ -401,7 +407,9 @@
 				6C8DC9192866763A00D27919 /* ManualView.swift in Sources */,
 				CC99202C2A5B1D0D004867D9 /* Test.swift in Sources */,
 				CC2089762C3D9881003E7574 /* EngManualView.swift in Sources */,
+				CCE305662C9CBC2800CFF89C /* QuotesNotification.swift in Sources */,
 				6CB2011E2867C4A500B87D1B /* AboutView.swift in Sources */,
+				CCE305642C9CB72500CFF89C /* NotificationTest.swift in Sources */,
 				6CF6924027F42A0900A0D9F3 /* WithU.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,7 +444,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CryingCloud.WithU.QuoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -465,7 +473,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CryingCloud.WithU.QuoteWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -622,7 +630,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CryingCloud.WithU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -657,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CryingCloud.WithU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
