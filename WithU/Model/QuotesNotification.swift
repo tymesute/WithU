@@ -34,7 +34,7 @@ func configureNotification() {
     content.sound = UNNotificationSound.default
     
     // show this notification one every hour
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3600, repeats: true)
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10800, repeats: true)
     
     // choose a random identifier
     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
