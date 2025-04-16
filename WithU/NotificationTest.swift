@@ -12,9 +12,6 @@ struct NotificationTest: View {
     var body: some View {
         VStack {
 
-        }.onAppear {
-            allowNotification()
-            configureNotification()
         }
     }
 }

@@ -155,8 +155,8 @@ struct HomeView: View {
             }
         }.onAppear {
             //notification
-            allowNotification()
-            configureNotification()
+            //allowNotification()
+            //configureNotification()
         }
     }
     
